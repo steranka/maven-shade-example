@@ -63,4 +63,6 @@ Since that signature did not exist, the exception occured.
 The solution is to include both versions of the `loglib` jar file as shown in the next diagram.
 ![Summary of the Solution](doc/images/solution.png "Summary of Solution")
 
-From 
+# Next Steps
+If you want to follow along with what I did, and learn how I solved this problem
+continue [here with the doc/01-Starting.md](doc/01-Starting.md) file.

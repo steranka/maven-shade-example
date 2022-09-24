@@ -162,4 +162,7 @@ an exception.
 
 To me it was not intuitive that I had to change the goodlib.jar file because
 in my real-life example, I'm using a JAR file that I got from a 3rd party
-and I don't have the code to change it s
+and I don't have the code to change it.
+
+So I still need to figure out how to get the shade plugin to work as in my first attempt,
+or find a way to shade the 3rd party dependency without having the code to build it.
