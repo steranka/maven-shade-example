@@ -10,8 +10,9 @@
 
     <modules>
         <module>helloworld</module>
-        <module>loglib1</module>
-        <module>loglib2</module>
+        <module>loglibv2</module>
+        <module>goodlib</module>
+        <module>loglibv1</module>
     </modules>
 
     <properties>
