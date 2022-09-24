@@ -29,18 +29,6 @@
                                     <mainClass>com.steranka.play.HelloWorldApp</mainClass>
                                 </transformer>
                             </transformers>
-
-                            <relocations>
-                                <relocation>
-                                    <pattern>com.steranka.play</pattern>
-                                    <shadedPattern>com.shaded.steranka.play</shadedPattern>
-                                    <excludes>
-                                        <exclude>com.steranka.play.HelloWorldApp</exclude>
-                                        <exclude>com.steranka.play.GoodFeature</exclude>
-                                    </excludes>
-                                </relocation>
-
-                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
