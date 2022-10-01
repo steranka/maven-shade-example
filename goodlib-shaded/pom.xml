@@ -2,15 +2,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.steranka.play</groupId>
-    <artifactId>helloworld</artifactId>
+    <artifactId>goodlib-shaded</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
-    <name>helloworld</name>
+    <version>1.2.1</version>
+    <name>goodlib</name>
     <url>http://maven.apache.org</url>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.steranka.play</groupId>
+            <artifactId>goodlib</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -24,35 +31,19 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.steranka.play.HelloWorldApp</mainClass>
-                                </transformer>
-                            </transformers>
-
+                            <relocations>
+                                <relocation>
+                                    <pattern>com.steranka.play</pattern>
+                                    <shadedPattern>com.shaded.steranka.play</shadedPattern>
+                                    <excludes>
+                                        <exclude>com.steranka.play.GoodFeature</exclude>
+                                    </excludes>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
-
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.steranka.play</groupId>
-            <artifactId>goodlib-shaded</artifactId>
-            <version>1.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.steranka.play</groupId>
-            <artifactId>loglib</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-    </dependencies>
 </project>

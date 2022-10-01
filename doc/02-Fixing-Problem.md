@@ -166,3 +166,6 @@ and I don't have the code to change it.
 
 So I still need to figure out how to get the shade plugin to work as in my first attempt,
 or find a way to shade the 3rd party dependency without having the code to build it.
+
+# I found a better solution
+Click on [next](03-Fixing-Problem-another-way.md) to see the next approach I took.

@@ -41,6 +41,7 @@ So by default, when a FAT jar is created for the **HelloWorld** application, the
 The result is that either the `HelloWorld` class will crash or the `GoodFeature` class will crash. *Where crash means throw an exception*
 Below is an example of the exception I saw when I first ran the application.
 ```
+java -jar helloworld\target\helloworld-1.0.0.jar
 Hello World!
 What's up, Sam
 Exception in thread "main" java.lang.NoSuchMethodError: 'java.lang.String com.steranka.play.LogIt.sayHello(java.lang.String)'
@@ -65,4 +66,4 @@ The solution is to include both versions of the `loglib` jar file as shown in th
 
 # Next Steps
 If you want to follow along with what I did, and learn how I solved this problem
-continue [here with the doc/01-Starting.md](doc/01-Starting.md) file.
+continue [here with cthe doc/01-Starting.md](doc/01-Starting.md) file.

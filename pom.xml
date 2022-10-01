@@ -13,6 +13,7 @@
         <module>loglibv2</module>
         <module>goodlib</module>
         <module>loglibv1</module>
+        <module>goodlib-shaded</module>
     </modules>
 
     <properties>
